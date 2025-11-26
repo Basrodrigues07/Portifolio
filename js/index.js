@@ -88,7 +88,7 @@ function startTypingSequence() {
                 setTimeout(() => {
                     document.querySelector('.skills-grid').style.display = 'grid';
                     document.querySelectorAll('.skill-item').forEach(animateSkill);
-                }, 500);
+                }, 100);
             });
         });
     });
