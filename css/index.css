@@ -753,6 +753,18 @@ section h1 {
     margin-bottom: 10px;
 }
 
+.click-hint {
+    color: #666;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 5px;
+    display: block;
+}
+
+.item-formacao.expandido .click-hint {
+    display: none;
+}
+
 .cabecalho-formacao h2 {
     color: #00aaff;
     margin: 0;
