@@ -30,6 +30,10 @@ function typeWriter() {
     setTimeout(typeWriter, isDeleting ? 50 : 100);
 }
 
+function expandirFormacao(elemento) {
+    elemento.classList.toggle('expandido');
+}
+
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({
         behavior: 'smooth'

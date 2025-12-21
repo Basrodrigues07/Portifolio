@@ -10,10 +10,11 @@
 
 <body>
     <nav>
-        <div class="nav-item" onclick="scrollToSection('home')">Home</div>
-        <div class="nav-item" onclick="scrollToSection('about')">About Me</div>
-        <div class="nav-item" onclick="scrollToSection('projects')">Projects</div>
-        <div class="nav-item" onclick="scrollToSection('contact')">Contact</div>
+        <div class="nav-item" onclick="scrollToSection('home')">Início</div>
+        <div class="nav-item" onclick="scrollToSection('about')">Sobre Mim</div>
+        <div class="nav-item" onclick="scrollToSection('formacao')">Formação</div>
+        <div class="nav-item" onclick="scrollToSection('projects')">Projetos</div>
+        <div class="nav-item" onclick="scrollToSection('contact')">Contato</div>
     </nav> 
     <main id="home">
         <div class="profile-section">
@@ -106,6 +107,43 @@
         </main>
     </section>
 
+    <section id="formacao">
+        <h1>Formação Acadêmica</h1>
+        <div id="color"></div>
+        
+        <main>
+            <div class="section-card">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 32C196.3 32 96 132.3 96 256C96 379.7 196.3 480 320 480C443.7 480 544 379.7 544 256C544 132.3 443.7 32 320 32zM320 144C337.7 144 352 158.3 352 176C352 193.7 337.7 208 320 208C302.3 208 288 193.7 288 176C288 158.3 302.3 144 320 144zM368 336C368 344.8 360.8 352 352 352L288 352C279.2 352 272 344.8 272 336L272 304C272 295.2 279.2 288 288 288L304 288L304 256L288 256C279.2 256 272 248.8 272 240C272 231.2 279.2 224 288 224L320 224C328.8 224 336 231.2 336 240L336 288L352 288C360.8 288 368 295.2 368 304L368 336z"/></svg>
+                </div>
+                <h3>Educação</h3>
+            </div>
+            
+            <div class="lista-formacao">
+                <div class="item-formacao" onclick="expandirFormacao(this)">
+                    <div class="cabecalho-formacao">
+                        <h2>Colégio Cotemig</h2>
+                        <span class="duracao-formacao">2023 - 2025</span>
+                    </div>
+                    <span class="grau-formacao">Ensino médio técnico em TI</span>
+                    <div class="descricao-formacao">
+                        <p>Curso técnico integrado ao ensino médio com foco em Tecnologia da Informação. Aprendizado de programação, desenvolvimento web, banco de dados, redes e suporte técnico. Desenvolvimento de projetos práticos utilizando linguagens como C#, PHP, JavaScript e MySQL.</p>
+                    </div>
+                </div>
+                
+                <div class="item-formacao" onclick="expandirFormacao(this)">
+                    <div class="cabecalho-formacao">
+                        <h2>CNA - Curso de Idiomas</h2>
+                        <span class="duracao-formacao">2018 - 2022</span>
+                    </div>
+                    <span class="grau-formacao">Curso de Inglês - Intermediário - Avançado</span>
+                    <div class="descricao-formacao">
+                        <p>Curso completo de inglês com foco em conversação, gramática e vocabulário técnico. Desenvolvimento de habilidades de comunicação oral e escrita, preparação para certificações internacionais e inglês técnico para área de tecnologia.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
     <section id="projects">
         <h1>Meus Projetos</h1>
         <div id="color"></div>

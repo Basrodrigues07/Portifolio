@@ -127,7 +127,7 @@ nav .nav-item a {
 
 section {
     min-height: 100vh;
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 section h1 {
@@ -715,4 +715,76 @@ section h1 {
     .hero-section p {
         font-size: 0.9rem;
     }
+}
+
+#formacao main {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lista-formacao {
+    margin-top: 20px;
+}
+
+.item-formacao {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid #00aaff;
+}
+
+.item-formacao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cabecalho-formacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cabecalho-formacao h2 {
+    color: #00aaff;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.duracao-formacao {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.grau-formacao {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.descricao-formacao {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.item-formacao.expandido .descricao-formacao {
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+.descricao-formacao p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
 }
