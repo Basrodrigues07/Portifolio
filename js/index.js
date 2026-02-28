@@ -63,12 +63,17 @@ function createProgressiveTypeWriter(text, selector, callback) {
         if (i < text.length) {
             element.textContent += text.charAt(i);
             i++;
-            setTimeout(type, 25);
+            setTimeout(type, 8);
         } else {
-            if (callback) setTimeout(callback, 300);
+            if (callback) setTimeout(callback, 100);
         }
     }
     type();
+}
+
+function showTextInstantly(selector, text) {
+    const element = document.querySelector(selector);
+    element.textContent = text;
 }
 
 function setupHoverExpansion(selector, fullText) {
@@ -82,6 +87,27 @@ function setupHoverExpansion(selector, fullText) {
 function startTypingSequence() {
     createProgressiveTypeWriter(aboutTexts.about, '.typing-text', () => {
         setupHoverExpansion('.typing-text', aboutTexts.about);
+        
+        const objectivesTitle = document.querySelector('.section-card:nth-child(2) h3');
+        const skillsTitle = document.querySelector('.section-card:nth-child(3) h3');
+        
+        if (objectivesTitle) {
+            objectivesTitle.style.cursor = 'pointer';
+            objectivesTitle.addEventListener('click', () => {
+                showTextInstantly('.typing-text-objectives', aboutTexts.objectives);
+                setupHoverExpansion('.typing-text-objectives', aboutTexts.objectives);
+            });
+        }
+        
+        if (skillsTitle) {
+            skillsTitle.style.cursor = 'pointer';
+            skillsTitle.addEventListener('click', () => {
+                showTextInstantly('.typing-text-skills', aboutTexts.skills);
+                setupHoverExpansion('.typing-text-skills', aboutTexts.skills);
+                document.querySelector('.skills-grid').style.display = 'grid';
+                document.querySelectorAll('.skill-item').forEach(animateSkill);
+            });
+        }
         
         createProgressiveTypeWriter(aboutTexts.objectives, '.typing-text-objectives', () => {
             setupHoverExpansion('.typing-text-objectives', aboutTexts.objectives);
